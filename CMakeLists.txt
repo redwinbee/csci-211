@@ -7,4 +7,6 @@ add_executable(csci_211 main.cpp
         eight_queens.cpp
         eight_queens.h
         eight_queens_1d.cpp
-        eight_queens_1d.h)
+        eight_queens_1d.h
+        eight_queens_nogoto.cpp
+        eight_queens_nogoto.h)
