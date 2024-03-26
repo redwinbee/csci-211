@@ -11,4 +11,6 @@ add_executable(csci_211 main.cpp
         eight_queens_nogoto.cpp
         eight_queens_nogoto.h
         eight_numbers.cpp
-        eight_numbers.h)
+        eight_numbers.h
+        stable_marriage.cpp
+        stable_marriage.h)
