@@ -13,4 +13,6 @@ add_executable(csci_211 main.cpp
         eight_numbers.cpp
         eight_numbers.h
         stable_marriage.cpp
-        stable_marriage.h)
+        stable_marriage.h
+        pointers.cpp
+        pointers.h)
