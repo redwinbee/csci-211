@@ -4,6 +4,7 @@
 #include "eight_numbers.h"
 #include "stable_marriage.h"
 #include "pointers.h"
+#include "swap_function.h"
 
 int main() {
 //    EightQueens::run();
@@ -11,5 +12,6 @@ int main() {
 //    EightQueensNoGoTo::run();
 //    EightNumbers::run();
 //    StableMarriage::run();
-    Pointers::run();
+//    Pointers::run();
+    Swap::run();
 }

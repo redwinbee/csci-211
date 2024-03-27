@@ -15,4 +15,6 @@ add_executable(csci_211 main.cpp
         stable_marriage.cpp
         stable_marriage.h
         pointers.cpp
-        pointers.h)
+        pointers.h
+        swap_function.cpp
+        swap_function.h)
