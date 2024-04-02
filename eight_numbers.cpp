@@ -1,27 +1,30 @@
-#include <iostream>
 #include "eight_numbers.h"
 
-void EightNumbers::run() {
+#include <iostream>
+
+void EightNumbers::run()
+{
     int cross[8] = {};
     eightNumbers(cross, 0);
 }
 
-bool EightNumbers::ok(const int cross[], int cap) {
+bool EightNumbers::ok(const int cross[], int cap)
+{
     /*
      * adjacent blocks mapping - each row contains a list of indices
      * identifying other blocks that could cause conflicts if not checked
-     * before assigning a number to that row. the sentinel value (stopping value)
-     * after each element in the list is -1.
+     * before assigning a number to that row. the sentinel value (stopping
+     * value) after each element in the list is -1.
      */
     int checklist[8][5] = {
-            {-1},
-            {0, -1},
-            {0, -1},
-            {0, 1, 2, -1},
-            {0, 1, 3, -1},
-            {1, 4, -1},
-            {2, 3, 4, -1},
-            {3, 4, 5, 6, -1},
+        { -1 },
+        { 0, -1 },
+        { 0, -1 },
+        { 0, 1, 2, -1 },
+        { 0, 1, 3, -1 },
+        { 1, 4, -1 },
+        { 2, 3, 4, -1 },
+        { 3, 4, 5, 6, -1 },
     };
 
     // row test
@@ -44,7 +47,8 @@ bool EightNumbers::ok(const int cross[], int cap) {
     return true;
 }
 
-void EightNumbers::eightNumbers(int cross[], int cap) {  // NOLINT (misc-no-recursion)
+void EightNumbers::eightNumbers(int cross[], int cap)
+{ // NOLINT (misc-no-recursion)
     if (cap == 8) {
         print(cross);
         return;
@@ -57,7 +61,8 @@ void EightNumbers::eightNumbers(int cross[], int cap) {  // NOLINT (misc-no-recu
     }
 }
 
-void EightNumbers::print(int cross[]) {
+void EightNumbers::print(int cross[])
+{
     static int count = 0;
     std::cout << "solution #" << ++count << '\n';
     std::cout << ' ' << cross[0] << cross[1] << '\n';

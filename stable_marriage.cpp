@@ -1,7 +1,9 @@
-#include <iostream>
 #include "stable_marriage.h"
 
-void StableMarriage::run() {
+#include <iostream>
+
+void StableMarriage::run()
+{
     int pairs[3];
     int col = 0;
     pairs[col] = 0;
@@ -10,8 +12,7 @@ void StableMarriage::run() {
         if (col == 3) {
             print(pairs);
             col--;
-        }
-        else {
+        } else {
             pairs[col] = -1;
         }
         while (pairs[col] != 3) {
@@ -21,8 +22,7 @@ void StableMarriage::run() {
                 if (col == -1) {
                     break;
                 }
-            }
-            else if (ok(pairs, col)) {
+            } else if (ok(pairs, col)) {
                 break;
             }
         }
@@ -32,17 +32,18 @@ void StableMarriage::run() {
     std::cout << "no more solutions!\n";
 }
 
-bool StableMarriage::ok(const int *pairs, int col) {
+bool StableMarriage::ok(const int* pairs, int col)
+{
     const int mp[3][3] = {
-            {0, 2, 1},
-            {0, 2, 1},
-            {1, 2, 0},
+        { 0, 2, 1 },
+        { 0, 2, 1 },
+        { 1, 2, 0 },
     };
 
     const int wp[3][3] = {
-            {2, 1, 0},
-            {0, 1, 2},
-            {2, 0, 1},
+        { 2, 1, 0 },
+        { 0, 1, 2 },
+        { 2, 0, 1 },
     };
 
     // legend
@@ -71,8 +72,8 @@ bool StableMarriage::ok(const int *pairs, int col) {
     }
 
     /*
-     * check if the new man prefers the current woman to his partner and if the current
-     * woman prefers the new man to her partner
+     * check if the new man prefers the current woman to his partner and if the
+     * current woman prefers the new man to her partner
      */
     for (int i = 0; i < col; i++) {
         if (mp[col][pairs[i]] < mp[col][pairs[col]] && wp[pairs[i]][col] < wp[pairs[i]][i]) {
@@ -83,7 +84,8 @@ bool StableMarriage::ok(const int *pairs, int col) {
     return true;
 }
 
-void StableMarriage::print(const int *pairs) {
+void StableMarriage::print(const int* pairs)
+{
     static int solution_count = 0;
     std::cout << "solution #" << solution_count++ << '\n';
     std::cout << "man\twoman" << '\n';

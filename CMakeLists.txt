@@ -17,4 +17,6 @@ add_executable(csci_211 main.cpp
         pointers.cpp
         pointers.h
         swap_function.cpp
-        swap_function.h)
+        swap_function.h
+        swap_arrays_function.cpp
+        swap_arrays_function.h)

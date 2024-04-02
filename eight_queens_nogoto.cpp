@@ -1,7 +1,9 @@
-#include <iostream>
 #include "eight_queens_nogoto.h"
 
-void EightQueensNoGoTo::run() {
+#include <iostream>
+
+void EightQueensNoGoTo::run()
+{
     int queens[8] = {};
     int col = 0;
     int solution_count = 0;
@@ -11,8 +13,7 @@ void EightQueensNoGoTo::run() {
         if (col == 8) {
             print(queens, solution_count);
             col--;
-        }
-        else {
+        } else {
             queens[col] = -1;
         }
         while (queens[col] != 8) {
@@ -22,8 +23,7 @@ void EightQueensNoGoTo::run() {
                 if (col == -1) {
                     break;
                 }
-            }
-            else if (ok(queens, col)) {
+            } else if (ok(queens, col)) {
                 break;
             }
         }
@@ -33,7 +33,8 @@ void EightQueensNoGoTo::run() {
     std::cout << "no more solutions!\n";
 }
 
-bool EightQueensNoGoTo::ok(const int queens[], int col) {
+bool EightQueensNoGoTo::ok(const int queens[], int col)
+{
     // row test
     for (int i = 0; i < col; i++) {
         if (queens[i] == queens[col]) {
@@ -58,14 +59,14 @@ bool EightQueensNoGoTo::ok(const int queens[], int col) {
     return true;
 }
 
-void EightQueensNoGoTo::print(const int queens[], int &solution_count) {
+void EightQueensNoGoTo::print(const int queens[], int& solution_count)
+{
     printf("solution #%d:\n", solution_count++);
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if (queens[j] == i) {
                 std::cout << 1 << ' ';
-            }
-            else {
+            } else {
                 std::cout << 0 << ' ';
             }
         }
