@@ -1,6 +1,7 @@
 #include "eight_queens_fancy.h"
 
 #include <iostream>
+#include <string>
 
 void EightQueensFancy::run()
 {
@@ -61,35 +62,36 @@ bool EightQueensFancy::ok(const int queens[], int col)
 
 void EightQueensFancy::print(const int queens[], int& solution_count)
 {
-    const char* BOX = "\u2588";
+    const std::string BOX = "\u2588";
+
     printf("solution #%d:\n", solution_count++);
 
-    typedef char box[5][7];
+    typedef std::string box[5][7];
     box black_box, white_box, *board[8][8];
 
     // initialize the white queen
-    char white_queen[5][7] = {
-        { char(219), char(219), char(219), char(219), char(219), char(219), char(219) },
-        { char(219), ' ', char(219), ' ', char(219), ' ', char(219) },
-        { char(219), ' ', ' ', ' ', ' ', ' ', char(219) },
-        { char(219), ' ', ' ', ' ', ' ', ' ', char(219) },
-        { char(219), char(219), char(219), char(219), char(219), char(219), char(219) },
+    std::string black_queen[5][7] = {
+        { BOX, BOX, BOX, BOX, BOX, BOX, BOX },
+        { BOX, " ", BOX, " ", BOX, " ", BOX },
+        { BOX, " ", " ", " ", " ", " ", BOX },
+        { BOX, " ", " ", " ", " ", " ", BOX },
+        { BOX, BOX, BOX, BOX, BOX, BOX, BOX },
     };
 
     // initialize the black queen
-    char black_queen[5][7] = {
-        { ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
-        { ' ', char(219), ' ', char(219), ' ', char(219), ' ' },
-        { ' ', char(219), char(219), char(219), char(219), char(219), ' ' },
-        { ' ', char(219), char(219), char(219), char(219), char(219), ' ' },
-        { ' ', ' ', ' ', ' ', ' ', ' ', ' ' },
+    std::string white_queen[5][7] = {
+        { " ", " ", " ", " ", " ", " ", " " },
+        { " ", BOX, " ", BOX, " ", BOX, " " },
+        { " ", BOX, BOX, BOX, BOX, BOX, " " },
+        { " ", BOX, BOX, BOX, BOX, BOX, " " },
+        { " ", " ", " ", " ", " ", " ", " " },
     };
 
     // initialize the colour of the boxes (the squares on the chess board)
     for (int i = 0; i < 5; i++) {
         for (int j = 0; j < 7; j++) {
             black_box[i][j] = ' ';
-            white_box[i][j] = char(219);
+            white_box[i][j] = BOX;
         }
     }
 
