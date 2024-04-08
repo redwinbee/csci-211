@@ -3,22 +3,6 @@ project(csci_211)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(csci_211 main.cpp
-        eight_queens.cpp
-        eight_queens.h
-        eight_queens_1d.cpp
-        eight_queens_1d.h
-        eight_queens_fancy.cpp
-        eight_queens_fancy.h
-        eight_queens_nogoto.cpp
-        eight_queens_nogoto.h
-        eight_numbers.cpp
-        eight_numbers.h
-        stable_marriage.cpp
-        stable_marriage.h
-        pointers.cpp
-        pointers.h
-        swap_function.cpp
-        swap_function.h
-        swap_arrays_function.cpp
-        swap_arrays_function.h)
+file(GLOB SOURCES "*.cpp" "*.h")
+
+add_executable(csci_211 ${SOURCES})
