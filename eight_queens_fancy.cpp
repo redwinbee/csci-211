@@ -62,10 +62,15 @@ bool EightQueensFancy::ok(const int queens[], int col)
 
 void EightQueensFancy::print(const int queens[], int& solution_count)
 {
-    const std::string BOX = "\u2588";
-
     printf("solution #%d:\n", solution_count++);
+    printf("1D array: ");
+    std::cout << "[ ";
+    for (int i = 0; i < 8; i++) {
+        std::cout << queens[i] << ' ';
+    }
+    std::cout << ']' << std::endl;
 
+    const std::string BOX = "\u2588";
     typedef std::string box[5][7];
     box black_box, white_box, *board[8][8];
 
@@ -99,9 +104,17 @@ void EightQueensFancy::print(const int queens[], int& solution_count)
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if ((i + j) % 2 == 0) {
-                board[i][j] = &white_box;
+                if (i == queens[j]) {
+                    board[i][j] = &black_queen;
+                } else {
+                    board[i][j] = &white_box;
+                }
             } else {
-                board[i][j] = &black_box;
+                if (i == queens[j]) {
+                    board[i][j] = &white_queen;
+                } else {
+                    board[i][j] = &black_box;
+                }
             }
         }
     }

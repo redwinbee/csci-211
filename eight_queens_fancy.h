@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 class EightQueensFancy {
 public:
     static void run();
