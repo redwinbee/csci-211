@@ -7,6 +7,7 @@
 #include "stable_marriage.h"
 #include "swap_arrays_function.h"
 #include "swap_function.h"
+#include "vectors.h"
 
 int main()
 {
@@ -18,5 +19,6 @@ int main()
     // Pointers::run();
     // Swap::run();
     // SwapArray::run();
-    EightQueensFancy::run();
+    // EightQueensFancy::run();
+    Vectors::run();
 }
