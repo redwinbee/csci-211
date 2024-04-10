@@ -1,2 +1,6 @@
 # CMake build files
 build/
+cmake-build-debug/
+
+# IDE specific
+.idea/
