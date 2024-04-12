@@ -7,6 +7,7 @@
 #include "stable_marriage.h"
 #include "swap_arrays_function.h"
 #include "swap_function.h"
+#include "tower_of_hanoi.h"
 #include "vectors.h"
 
 int main()
@@ -20,5 +21,6 @@ int main()
     // Swap::run();
     // SwapArray::run();
     // EightQueensFancy::run();
-    Vectors::run();
+    // Vectors::run();
+    TowerOfHanoi::run();
 }
