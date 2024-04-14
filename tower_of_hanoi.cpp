@@ -11,7 +11,7 @@ void TowerOfHanoi::run()
      * for future use when working with std::cin.
      */
     int disks;
-    std::cout << "enter the number of disks to use: ";
+    std::cout << "enter the number of rings to use: ";
     std::cin >> disks;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
@@ -34,7 +34,7 @@ void TowerOfHanoi::run()
      */
     int from = 0;
     int to = 1;
-    for (int i = 0; i <= (2 ^ disks + 1); i++) {
+    for (int i = 0; i < std::pow(2, disks) - 1; i++) {
         calculate_from(towers, to, from);
         int candidate = towers[from].back();
         calculate_to(towers, candidate, to, from);
