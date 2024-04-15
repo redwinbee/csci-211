@@ -3,6 +3,7 @@
 #include "eight_queens_1d.h"
 #include "eight_queens_fancy.h"
 #include "eight_queens_nogoto.h"
+#include "integration.h"
 #include "pointers.h"
 #include "stable_marriage.h"
 #include "swap_arrays_function.h"
@@ -22,5 +23,6 @@ int main()
     // SwapArray::run();
     // EightQueensFancy::run();
     // Vectors::run();
-    TowerOfHanoi::run();
+    // TowerOfHanoi::run();
+    Integration::run();
 }
