@@ -1,3 +1,5 @@
+#include "dynamic_2d_array.h"
+#include "dynamic_memeory.h"
 #include "eight_numbers.h"
 #include "eight_queens.h"
 #include "eight_queens_1d.h"
@@ -24,5 +26,7 @@ int main()
     // EightQueensFancy::run();
     // Vectors::run();
     // TowerOfHanoi::run();
-    Integration::run();
+    // Integration::run();
+    // DynamicMemory::run();
+    Dynamic2DArray::run();
 }
