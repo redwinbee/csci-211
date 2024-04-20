@@ -6,6 +6,7 @@
 #include "eight_queens_fancy.h"
 #include "eight_queens_nogoto.h"
 #include "integration.h"
+#include "n_queens.h"
 #include "pointers.h"
 #include "stable_marriage.h"
 #include "swap_arrays_function.h"
@@ -28,5 +29,6 @@ int main()
     // TowerOfHanoi::run();
     // Integration::run();
     // DynamicMemory::run();
-    Dynamic2DArray::run();
+    // Dynamic2DArray::run();
+    NQueens::run();
 }
