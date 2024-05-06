@@ -8,6 +8,7 @@
 #include "integration.h"
 #include "n_queens.h"
 #include "pointers.h"
+#include "recursion.h"
 #include "stable_marriage.h"
 #include "swap_arrays_function.h"
 #include "swap_function.h"
@@ -29,6 +30,7 @@ int main()
     // TowerOfHanoi::run();
     // Integration::run();
     // DynamicMemory::run();
-    // Dynamic2DArray::run();
-    NQueens::run();
+    Dynamic2DArray::run();
+    // NQueens::run();
+    // Recursion::run();
 }
