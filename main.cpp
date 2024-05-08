@@ -1,3 +1,4 @@
+#include "classes.h"
 #include "dynamic_2d_array.h"
 #include "dynamic_memeory.h"
 #include "eight_numbers.h"
@@ -30,7 +31,8 @@ int main()
     // TowerOfHanoi::run();
     // Integration::run();
     // DynamicMemory::run();
-    Dynamic2DArray::run();
+    // Dynamic2DArray::run();
     // NQueens::run();
     // Recursion::run();
+    Classes::run();
 }
