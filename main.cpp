@@ -8,6 +8,7 @@
 #include "eight_queens_nogoto.h"
 #include "integration.h"
 #include "n_queens.h"
+#include "numbers.h"
 #include "pointers.h"
 #include "recursion.h"
 #include "stable_marriage.h"
@@ -34,5 +35,6 @@ int main()
     // Dynamic2DArray::run();
     // NQueens::run();
     // Recursion::run();
-    Classes::run();
+    // Classes::run();
+    Numbers::run();
 }
